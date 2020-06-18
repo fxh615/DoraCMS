@@ -9,7 +9,7 @@ module.exports = appInfo => {
         // 数据库连接
         mongoose: {
             client: {
-                url: 'mongodb://127.0.0.1:27017/doracms2',
+                url: 'mongodb://xiaohui:y52%mg94@127.0.0.1:27017/doracms2',
                 options: {
                     useCreateIndex: true,
                     useUnifiedTopology: true,
@@ -19,7 +19,7 @@ module.exports = appInfo => {
         },
         // mongodb相关路径
         mongodb: {
-            binPath: '/usr/local/mongodb/mongodb-linux-x86_64-ubuntu1604-4.0.0/bin/',
+            binPath: '/usr/local/Cellar/mongodb/4.0.3_1/bin/',
             backUpPath: '/home/database/doracms/'
         },
         // 静态目录
@@ -33,8 +33,8 @@ module.exports = appInfo => {
             dir: '/home/doraData/logsdir/doracms',
         },
         // 服务地址配置
-        server_path: 'https://www.html-js.cn',
-        server_api: 'https://www.html-js.cn/api',
+        server_path: 'https://www.10dang.com',
+        server_api: 'https://www.10dang.com/api',
 
     }
 };
