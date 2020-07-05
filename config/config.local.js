@@ -2,7 +2,7 @@
 const path = require('path')
 const isDocker = process.env.BUILD_ENV == 'docker' ? true : false;
 const mongohost = isDocker ? 'mongodb' : '127.0.0.1:27017';
-const mongobin = isDocker ? '' : '/usr/local/Cellar/mongodb/4.0.3_1/bin/';
+const mongobin = isDocker ? '' : '/usr/local/mongodb/bin/';
 
 module.exports = appInfo => {
 
@@ -40,7 +40,8 @@ module.exports = appInfo => {
         // DEV_CONFIG_MODULES_END
         mongoose: {
             client: {
-                url: `mongodb://${mongohost}/doracms2`,
+                //url: `mongodb://${mongohost}/doracms2`,
+                url: 'mongodb://doramart:doramart@127.0.0.1:27017/doracms2',
                 options: {
                     useCreateIndex: true,
                     useUnifiedTopology: true,
@@ -61,8 +62,8 @@ module.exports = appInfo => {
         logger: {
             dir: path.join(appInfo.baseDir, 'logs'),
         },
-        server_path: 'http://127.0.0.1:8080',
-        server_api: 'http://127.0.0.1:8080/api'
+        server_path: 'https://www.10dang.com',
+        server_api: 'https://www.10dang.com/api'
 
     }
 };

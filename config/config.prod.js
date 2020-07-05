@@ -9,7 +9,7 @@ module.exports = appInfo => {
         // 数据库连接
         mongoose: {
             client: {
-                url: 'mongodb://xiaohui:y57%mg888@127.0.0.1:27017/doracms2',
+                url: 'mongodb://doramart:doramart@127.0.0.1:27017/doracms2',
                 options: {
                     useCreateIndex: true,
                     useUnifiedTopology: true,
@@ -19,7 +19,7 @@ module.exports = appInfo => {
         },
         // mongodb相关路径
         mongodb: {
-            binPath: '/usr/local/Cellar/mongodb/4.0.3_1/bin/',
+            binPath: '/usr/local/mongodb/bin/',
             backUpPath: '/home/database/doracms/'
         },
         // 静态目录
